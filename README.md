@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+Movie Explorer is a React-based web application that allows users to search for movies, view details, and manage a list of favorite movies. The application interacts with The Movie Database (TMDB) API to fetch and display movie data, including popular movies, movie details, and search results. Users can sign up, log in, and explore various movie categories, adding their favorite movies to a personalized list.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+User Authentication: Users can sign up and log in to access the application.
+Search Movies: Users can search for movies by name and view the results.
+Popular Movies: A list of popular movies is fetched from the TMDB API and displayed.
+Movie Details: Detailed information about a selected movie, including its title, genres, overview, and runtime.
+Favorites Management: Users can add movies to their favorites and view their favorite movies.
+Responsive Design: The application is responsive and works on various screen sizes
 
-## Available Scripts
 
-In the project directory, you can run:
+Setup Instructions
 
-### `npm start`
+Clone the Repository:
+    git clone https://github.com/srinivasvarmadatla/movie-explorer.git
+    cd movie-explorer
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Install Dependencies:npm install
 
-### `npm test`
+Create a .env File: Create a .env file in the root of the project and add your TMDB API key:
+    
+    REACT_APP_API_KEY=your_tmdb_api_key
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Run the Application: npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application will be available at http://localhost:3000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application uses The Movie Database (TMDB) API to fetch movie data. The API key should be stored in a .env file as REACT_APP_API_KEY. The following endpoints are utilized:
 
-### `npm run eject`
+1>Popular Movies:https://api.themoviedb.org/3/movie/popular?api_key=your_api_key
+2>Search Movies:https://api.themoviedb.org/3/search/movie?api_key=your_api_key&query=movie_name
+3>Movie Details:https://api.themoviedb.org/3/movie/movie_id?api_key=your_api_key
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+PROJECT STRUCTURE
+Context: context/favouriteContext.js - Manages favorite movies across the application.
+Components:
+Card.jsx - Displays movie information.
+Card2.jsx - Displays favorite movies.
+Pages:
+Login.jsx - User login page.
+Signup.jsx - User signup page.
+Search.jsx - Movie search page.
+Movies.jsx - Displays a list of movies based on search or popular movies.
+Details.jsx - Shows detailed information about a specific movie.
+Popular.jsx - Displays popular movies fetched from the API.
+Favorites.jsx - Displays the user's favorite movies.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Approach
+The project was built with a focus on modularity and reusability of components. React Router was utilized for client-side routing, ensuring a seamless navigation experience. State management for favorite movies was handled through React's Context API, allowing for easy access and updates across different components. The integration with TMDB's API was done using fetch, with error handling implemented to ensure a robust user experience.

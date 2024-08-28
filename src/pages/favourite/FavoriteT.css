@@ -1,0 +1,26 @@
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 80px;
+    color:white;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+.no-favs{
+    color: rgb(0, 255, 0);
+    font-size: 50px;
+    text-align: center;
+}
