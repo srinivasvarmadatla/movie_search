@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/github.io/MovieSEARCH/static/css/main.fc61d22e.css",
+    "main.js": "/github.io/MovieSEARCH/static/js/main.888fb864.js",
+    "static/media/home-paghe-bg.jpg": "/github.io/MovieSEARCH/static/media/home-paghe-bg.af1d4f4488ea5e5b1d0e.jpg",
+    "index.html": "/github.io/MovieSEARCH/index.html",
+    "main.fc61d22e.css.map": "/github.io/MovieSEARCH/static/css/main.fc61d22e.css.map",
+    "main.888fb864.js.map": "/github.io/MovieSEARCH/static/js/main.888fb864.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc61d22e.css",
+    "static/js/main.888fb864.js"
+  ]
+}
