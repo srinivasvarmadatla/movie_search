@@ -24,7 +24,6 @@ root.render(
         <Route path='/detail' element={<Details />} />
         <Route path='/Popular' element={<Popular />} />
         <Route path='/favmovies' element={<Favorite />} />
-        <Route path='*' element={<NotFound />} /> {/* Catch-all route for 404 */}
       </Routes>
     </BrowserRouter>
   </FavoritesProvider>
