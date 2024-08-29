@@ -14,15 +14,15 @@ body {
 
 /* Glass effect container */
 .container_glass {
-    width: 700px;
-    height: 500px;
-    margin: 190px auto;
+    width: 43.75rem;
+    height: 31.25rem;
+    margin: 11.875rem auto;
     background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-    box-shadow: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 20px; /* Added padding for better spacing */
+    border-radius: 0.625rem;
+    box-shadow: 0.125rem solid rgba(255, 255, 255, 0.1);
+    padding: 1.25rem; /* Added padding for better spacing */
 }
 
 /* Form styling */
@@ -36,7 +36,7 @@ form {
 /* Login header styling */
 form > .LOGIN_HEAD {
     font-family: "Montserrat", sans-serif; /* Changed to a more common font */
-    font-size: 40px;
+    font-size: 2.5rem;
     color: rgba(255, 255, 255, 1);
 }
 
@@ -46,25 +46,25 @@ form > .Password,
 form > .confirm_Password {
     display: flex;
     color: white;
-    width: 390px;
-    height: 50px;
+    width: 24.375rem;
+    height: 3.125rem;
     align-items: center;
     justify-content: center;
-    margin: 10px 0;
+    margin: 0.625rem 0;
 }
 
 form > .username > #Username,
 form > .Password > #Password,
 form > .confirm_Password > #Password1 {
-    font-size: 16px;    
+    font-size: 1rem;    
     height: 100%;
     width: 100%;
     border: none;
     outline: none;
-    border: 2px solid rgba(25, 118, 112, 0.2);
+    border: 0.125rem solid rgba(25, 118, 112, 0.2);
     background: transparent;
-    border-radius: 20px;
-    padding: 0px 20px;
+    border-radius: 1.25rem;
+    padding: 0 1.25rem;
     color: white;
 }
 
@@ -80,13 +80,13 @@ form > .username > i,
 form > .Password > i,
 form > .confirm_Password > i {
     position: absolute;
-    right: 20px;
+    right: 1.25rem;
 }
 
 
 form > .check_area {
     display: flex;
-    gap: 40px;
+    gap: 2.5rem;
     justify-content: center;
     align-items: center;
 }
@@ -95,41 +95,41 @@ form > .check_area {
 form > .check_area > .forget_password > a {
     text-decoration: none;
     color: white;
-    font-size: 20px; 
+    font-size: 1.25rem; 
 }
 
 
 form > .submit {
     text-align: center;
-    margin-top: 30px;
-    width: 300px;
-    height: 40px;
+    margin-top: 1.875rem;
+    width: 18.75rem;
+    height: 2.5rem;
 }
 
 form > .submit > button {
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     background-color: rgba(0, 255, 255, 1);
     transition: 0.2s ease-in-out;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: black; 
     cursor: pointer; 
 }
 
 form > .submit > button:hover {
-    box-shadow: 0px 1px 1px white;
+    box-shadow: 0px 0.125rem 0.125rem white;
 }
 
 
 form > .already_exist > p {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: white;
 }
 
 form > .already_exist > p > a {
-    font-size: 18px;
+    font-size: 1.125rem;
     text-decoration: none;
     color: rgba(0, 255, 255, 0.7);
     transition: 0.2s ease-in-out;
@@ -138,7 +138,7 @@ form > .already_exist > p > a {
 form > .already_exist > p button{
     background-color: transparent;
     color: rgba(0, 255, 255, 1);
-    font-size: 20px;
+    font-size: 1.25rem;
     border: none;
     outline: none;
     

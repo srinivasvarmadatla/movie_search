@@ -1,26 +1,26 @@
 .movies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 16px;
-    padding: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 1rem;
+    padding: 1rem;
     box-sizing: border-box;
 }
 
 h1{
-    font-size: 80px;
-    color:white;
+    font-size: 5rem;
+    color: white;
     width: 100%;
     text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     .movies-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
     }
 }
 
 .no-favs{
     color: rgb(0, 255, 0);
-    font-size: 50px;
+    font-size: 3.125rem;
     text-align: center;
 }
