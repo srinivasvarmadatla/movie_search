@@ -1,31 +1,27 @@
-/* Hide the scrollbar */
 ::-webkit-scrollbar {
     display: none;
 }
 
-/* General body styles */
 body {
     background-color: black;
     background-size: cover;
     background-position: center;
     margin: 0;
-    font-family: Arial, sans-serif; /* Added font family for better consistency */
+    font-family: Arial, sans-serif; 
 }
 
-/* Glass effect container */
 .container_glass {
     width: 43.75rem;
     height: 31.25rem;
     margin: 11.875rem auto;
     background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(0.625rem);
+    -webkit-backdrop-filter: blur(0.625rem);
     border-radius: 0.625rem;
     box-shadow: 0.125rem solid rgba(255, 255, 255, 0.1);
-    padding: 1.25rem; /* Added padding for better spacing */
+    padding: 1.25rem; 
 }
 
-/* Form styling */
 form {
     display: flex;
     flex-direction: column;
@@ -33,14 +29,12 @@ form {
     align-items: center;
 }
 
-/* Login header styling */
 form > .LOGIN_HEAD {
-    font-family: "Montserrat", sans-serif; /* Changed to a more common font */
+    font-family: "Montserrat", sans-serif; 
     font-size: 2.5rem;
     color: rgba(255, 255, 255, 1);
 }
 
-/* Username and password fields */
 form > .username,
 form > .Password,
 form > .confirm_Password {
@@ -75,14 +69,12 @@ form > .confirm_Password > #Password1::placeholder {
     opacity: 60%;
 }
 
-
 form > .username > i,
 form > .Password > i,
 form > .confirm_Password > i {
     position: absolute;
     right: 1.25rem;
 }
-
 
 form > .check_area {
     display: flex;
@@ -91,13 +83,11 @@ form > .check_area {
     align-items: center;
 }
 
-
 form > .check_area > .forget_password > a {
     text-decoration: none;
     color: white;
     font-size: 1.25rem; 
 }
-
 
 form > .submit {
     text-align: center;
@@ -119,9 +109,8 @@ form > .submit > button {
 }
 
 form > .submit > button:hover {
-    box-shadow: 0px 0.125rem 0.125rem white;
+    box-shadow: 0 0.125rem 0.125rem white;
 }
-
 
 form > .already_exist > p {
     font-size: 1.25rem;
@@ -135,13 +124,12 @@ form > .already_exist > p > a {
     transition: 0.2s ease-in-out;
 }
 
-form > .already_exist > p button{
+form > .already_exist > p button {
     background-color: transparent;
     color: rgba(0, 255, 255, 1);
     font-size: 1.25rem;
     border: none;
     outline: none;
-    
 }
 
 form > .already_exist > p > a:hover {

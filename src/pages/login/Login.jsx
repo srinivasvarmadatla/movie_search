@@ -52,7 +52,7 @@ function Login() {
                     <button type="submit">LOGIN</button>
                 </div>
                 <div className="already_exist">
-                    <p>Don't have an account? <button type="button">Register</button></p>
+                    <p>Don't have an account? <Link to="/sign-up"><button type="button">Register</button></Link></p>
                 </div>
             </form>
         </div>
