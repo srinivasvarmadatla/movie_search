@@ -28,7 +28,7 @@ function Card({ title, description, image, date,id}) {
                 <p className="card-description">{description}</p>
                 <p className="card-date">On: {date}</p>
                 <button className="card-button" onClick={showdetails}>Show</button>
-                <img src="/assets/like.png" alt="like" className="like-img" onClick={handleAddFavorite} />
+                <img src="C:/engineeering/movie-search/public/assets/like.png" alt="like" className="like-img" onClick={handleAddFavorite} />
             </div>
         </div>
     );

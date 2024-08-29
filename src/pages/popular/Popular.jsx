@@ -9,7 +9,7 @@ function Popular(){
     const [popularlist,setpopularlist]=useState([]);
 
     const fetch_movies= () => {
-        fetch(`https://api.themoviedb.org/3/movie/826510/recommendations?api_key=${apiKey}`)
+        fetch(`https://api.themoviedb.org/3/movie/826510/recommendations?api_key=122293e9a3904e9ebeda9af9e8e71df4`)
         .then(res=>res.json())
         .then(json=>setpopularlist(json.results))
     };

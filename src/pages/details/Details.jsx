@@ -13,7 +13,7 @@ function Details() {
 
     const fetchMovieDetail = () => {
         if (movieId) {
-            fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`)
+            fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=122293e9a3904e9ebeda9af9e8e71df4`)
                 .then(res => res.json())
                 .then(json => setMovieDetail(json))
                 .catch(error => console.error("Error fetching movie details:", error));
