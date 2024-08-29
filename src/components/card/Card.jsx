@@ -21,6 +21,8 @@ function Card({ title, description, image, date,id}) {
         addFavorite(movie);
     };
 
+    console.log(id);
+
     return (
         <div className="Card">
             <img src={`https://image.tmdb.org/t/p/w500${image}`} alt={title} className="card-image" />

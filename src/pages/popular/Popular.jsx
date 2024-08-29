@@ -2,6 +2,8 @@ import React from "react";
 import { useState,useEffect } from "react";
 import Card from "../../components/card/Card.jsx";
 
+import './PopularT.css';
+
 const apiKey = process.env.REACT_APP_API_KEY;
 
 function Popular(){
@@ -30,6 +32,7 @@ function Popular(){
                             title={movie.original_title}
                             date={movie.release_date}
                             description={movie.overview}
+                            id={movie.id}
                         />
                     ))}
                 </div>

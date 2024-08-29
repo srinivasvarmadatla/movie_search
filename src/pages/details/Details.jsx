@@ -13,14 +13,31 @@ function Details() {
 
     const fetchMovieDetail = () => {
         if (movieId) {
-            fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=122293e9a3904e9ebeda9af9e8e71df4`)
-                .then(res => res.json())
+            fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`)
+                .then(res => {
+                    if (!res.ok) {
+                        return Promise.reject("Movie not found in the main API");
+                    }
+                    return res.json();
+                })
                 .then(json => setMovieDetail(json))
-                .catch(error => console.error("Error fetching movie details:", error));
+                .catch(error => {
+                    console.error("Error fetching movie details:", error);
+                    fetch(`https://api.themoviedb.org/3/movie/826510/recommendations?api_key=${apiKey}`)
+                        .then(res => res.json())
+                        .then(json => {
+                            const foundMovie = json.results.find(movie => movie.id === parseInt(movieId));
+                            if (foundMovie) {
+                                setMovieDetail(foundMovie);
+                            } else {
+                                console.error("Movie not found in recommendations API either");
+                            }
+                        })
+                        .catch(recommendationError => console.error("Error fetching recommendations:", recommendationError));
+                });
         }
     };
 
-    console.log(movieDetail)
     useEffect(() => {
         fetchMovieDetail();
     }, [movieId]);
@@ -40,9 +57,9 @@ function Details() {
             }}
         >
             <div className="movie-detail-content">
-                <h1 className="movie-title">{movieDetail.title}</h1>
+                <h1 className="movie-title">{movieDetail.title || movieDetail.original_title}</h1>
                 <div className="movie-genres">
-                    {movieDetail.genres.map(genre => (
+                    {movieDetail.genres && movieDetail.genres.map(genre => (
                         <span key={genre.id} className="genre">{genre.name}</span>
                     ))}
                 </div>
