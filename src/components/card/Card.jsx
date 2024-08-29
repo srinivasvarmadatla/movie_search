@@ -8,7 +8,7 @@ function Card({ title, description, image, date,id}) {
     const navigate=useNavigate();
 
     const showdetails=()=>{
-        navigate("/details",{state:{movieId:id}});
+        navigate("/detail",{state:{movieId:id}});
     };
 
 
