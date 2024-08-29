@@ -2,6 +2,7 @@ import React, { useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import { FavoritesContext } from '../../context/favouriteContext.js'; 
 import './CardT.css';
+import LinkeIcon from "../../assets/like.png"
 
 function Card({ title, description, image, date,id}) {
 
@@ -28,7 +29,7 @@ function Card({ title, description, image, date,id}) {
                 <p className="card-description">{description}</p>
                 <p className="card-date">On: {date}</p>
                 <button className="card-button" onClick={showdetails}>Show</button>
-                <img src="C:/engineeering/movie-search/public/assets/like.png" alt="like" className="like-img" onClick={handleAddFavorite} />
+                <img src={LinkeIcon} alt="like" className="like-img" onClick={handleAddFavorite} />
             </div>
         </div>
     );
