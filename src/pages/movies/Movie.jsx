@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import './MovieT.css';
 import Card from "../../components/card/Card";
 
-
 const apiKey = process.env.REACT_APP_API_KEY;
 
 function Movies() {
@@ -11,12 +10,11 @@ function Movies() {
     const [filteredMovies, setFilteredMovies] = useState([]);
     const [error, setError] = useState(null);
     const location = useLocation();
-    const movieName = location.state?.movieName || ""; 
+    const movieName = location.state?.movieName || "";
 
     const fetchMovies = async () => {
         try {
-            let url; 
-            url = `https://api.themoviedb.org/3/discover/movie?api_key=122293e9a3904e9ebeda9af9e8e71df4`;
+            let url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
 
             const response = await fetch(url);
             if (!response.ok) {
@@ -25,7 +23,7 @@ function Movies() {
             const json = await response.json();
             const movies = json.results || [];
             setMoviesList(movies);
-            filterMovies(movies); 
+            filterMovies(movies);
         } catch (err) {
             setError("Failed to fetch movies: " + err.message);
             setFilteredMovies([]);
@@ -44,6 +42,7 @@ function Movies() {
             setError(null);
         }
     };
+
     useEffect(() => {
         fetchMovies();
     }, [movieName]);
