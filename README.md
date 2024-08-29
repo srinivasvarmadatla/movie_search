@@ -51,3 +51,19 @@ Favorites.jsx - Displays the user's favorite movies.
 
 Approach
 The project was built with a focus on modularity and reusability of components. React Router was utilized for client-side routing, ensuring a seamless navigation experience. State management for favorite movies was handled through React's Context API, allowing for easy access and updates across different components. The integration with TMDB's API was done using fetch, with error handling implemented to ensure a robust user experience.
+
+
+Login page:![Screenshot 2024-08-29 115952](https://github.com/user-attachments/assets/849fc7f2-173e-43c2-9343-e5c7b6e73fee)
+
+homw page: 
+![Screenshot 2024-08-29 120003](https://github.com/user-attachments/assets/b5fe3f32-7ba7-4b23-937c-ea7b1590ff11)
+
+recommended:
+![Screenshot 2024-08-29 120033](https://github.com/user-attachments/assets/4dcae16f-763e-4eff-822c-1f1a4d618983)
+
+POPULAR:
+![Screenshot 2024-08-29 120014](https://github.com/user-attachments/assets/11cd5d35-1db7-4bc3-8713-e88daebfea67)
+
+FAVORITE:
+![Screenshot 2024-08-29 120048](https://github.com/user-attachments/assets/165df19a-f1c8-402a-a5e6-98944c647ebc)
+![Screenshot 2024-08-29 120059](https://github.com/user-attachments/assets/49d87152-78f2-466d-9212-5e2bb42f215b)
