@@ -1,3 +1,7 @@
+(best view in desktop,tablet and mobile desktop view)
+(use api before running the web site as TMDB is blocked in india)
+
+
 deploy-Link: https://srinivasvarmadatla.github.io/TMDB_API_based/
 
 Movie Explorer is a React-based web application that allows users to search for movies, view details, and manage a list of favorite movies. The application interacts with The Movie Database (TMDB) API to fetch and display movie data, including popular movies, movie details, and search results. Users can sign up, log in, and explore various movie categories, adding their favorite movies to a personalized list.
