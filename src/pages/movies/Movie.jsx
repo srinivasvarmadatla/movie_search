@@ -14,7 +14,13 @@ function Movies() {
 
     const fetchMovies = async () => {
         try {
-            let url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
+            let url;
+
+            if (movieName) {
+                url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(movieName)}`;
+            } else {
+                url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
+            }
 
             const response = await fetch(url);
             if (!response.ok) {
