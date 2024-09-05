@@ -6,7 +6,7 @@ export const FavoritesProvider = ({ children }) => {
     const [favorites, setFavorites] = useState([]);
 
     const addFavorite = (movie) => {
-        setFavorites((prevFavorites) => [movie,...prevFavorites]);
+        setFavorites([movie,...favorites]);
     };
 
     return (
