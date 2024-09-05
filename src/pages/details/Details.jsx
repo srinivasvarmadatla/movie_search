@@ -5,51 +5,46 @@ import './DetailsT.css';
 const apiKey = process.env.REACT_APP_API_KEY;
 
 function Details() {
-
     const [movieDetail, setMovieDetail] = useState(null);
-
+    const [error, setError] = useState(null);
     const location = useLocation();
     const { movieId } = location.state || {};
 
-    const fetchMovieDetail = () => {
-        if (movieId) {
-            fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`)
-                .then(res => {
-                    if (!res.ok) {
-                        return Promise.reject("Movie not found in the main API");
-                    }
-                    return res.json();
-                })
-                .then(json => setMovieDetail(json))
-                .catch(error => {
-                    console.error("Error fetching movie details:", error);
-                    fetch(`https://api.themoviedb.org/3/movie/826510/recommendations?api_key=${apiKey}`)
-                        .then(res => res.json())
-                        .then(json => {
-                            const foundMovie = json.results.find(movie => movie.id === parseInt(movieId));
-                            if (foundMovie) {
-                                setMovieDetail(foundMovie);
-                            } else {
-                                console.error("Movie not found in recommendations API either");
-                            }
-                        })
-                        .catch(recommendationError => console.error("Error fetching recommendations:", recommendationError));
-                });
-        }
-    };
-
     useEffect(() => {
+        const fetchMovieDetail = async () => {
+            if (!movieId) {
+                setError("No movie ID provided.");
+                return;
+            }
+            try {
+                const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`);
+                if (!response.ok) {
+                    throw new Error("Movie not found");
+                }
+                const json = await response.json();
+                setMovieDetail(json);
+                setError(null);
+            } catch (error) {
+                setError(`Error fetching movie details: ${error.message}`);
+                setMovieDetail(null);
+            }
+        };
+
         fetchMovieDetail();
     }, [movieId]);
+
+    if (error) {
+        return <div className="error-message">{error}</div>;
+    }
 
     if (!movieDetail) {
         return <div>Loading...</div>;
     }
 
     return (
-        <div 
-            className="movie-detail-container" 
-            style={{ 
+        <div
+            className="movie-detail-container"
+            style={{
                 backgroundImage: `url(https://image.tmdb.org/t/p/original${movieDetail.backdrop_path})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
