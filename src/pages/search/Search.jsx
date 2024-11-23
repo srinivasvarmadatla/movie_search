@@ -15,7 +15,7 @@ function Search() {
     return (
         <>
             <div className="container1">
-                <h3>(PLEASE ON VPN IF PAGE IS NOT LODING ANYTHING)</h3>
+                <h3 style="color:white;">(PLEASE ON VPN IF PAGE IS NOT LODING ANYTHING)</h3>
                 <Link to='/Popular'><button>Popular</button></Link>
                 <Link to='/Movies'><button>Recommend?</button></Link>
                 <Link to='/favmovies'><button>Favorites</button></Link>
