@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/movie_search/static/css/main.49cecb4a.css",
-    "main.js": "/movie_search/static/js/main.13e6c08f.js",
+    "main.css": "/movie_search/static/css/main.6e312e82.css",
+    "main.js": "/movie_search/static/js/main.bd546bd1.js",
     "static/media/home-paghe-bg.jpg": "/movie_search/static/media/home-paghe-bg.af1d4f4488ea5e5b1d0e.jpg",
     "static/media/like.png": "/movie_search/static/media/like.320032cc32bfb1d2a630.png",
     "index.html": "/movie_search/index.html"
   },
   "entrypoints": [
-    "static/css/main.49cecb4a.css",
-    "static/js/main.13e6c08f.js"
+    "static/css/main.6e312e82.css",
+    "static/js/main.bd546bd1.js"
   ]
 }
