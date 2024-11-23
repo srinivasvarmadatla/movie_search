@@ -15,10 +15,14 @@ function Search() {
     return (
         <>
             <div className="container1">
-                <h3 style="color:white;">(PLEASE ON VPN IF PAGE IS NOT LODING ANYTHING)</h3>
-                <Link to='/Popular'><button>Popular</button></Link>
-                <Link to='/Movies'><button>Recommend?</button></Link>
-                <Link to='/favmovies'><button>Favorites</button></Link>
+                <div>
+                <h3>(PLEASE ON VPN IF PAGE IS NOT LODING ANYTHING)</h3>
+                </div>
+                <div className="InnerLinks">
+                    <Link to='/Popular'><button>Popular</button></Link>
+                    <Link to='/Movies'><button>Recommend?</button></Link>
+                    <Link to='/favmovies'><button>Favorites</button></Link>
+                </div>
             </div>
             <div className="container2">
                 <h1>Serach your movie name</h1>
